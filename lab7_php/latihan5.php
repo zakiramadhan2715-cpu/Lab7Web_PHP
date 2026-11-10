@@ -1,0 +1,12 @@
+<!-- cari.php -->
+<form method="GET" action="">
+<label for="kata">Kata kunci:</label>
+<input id="kata" name="kata" type="text">
+<button type="submit">Cari</button>
+</form>
+<?php
+if (isset($_GET["kata"])) {
+$kata = trim($_GET["kata"]);
+echo "Kata kunci: " . htmlspecialchars($kata, ENT_QUOTES, "UTF-8");
+}
+?>
